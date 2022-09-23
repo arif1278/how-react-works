@@ -11,7 +11,10 @@ const Watch = () => {
         setSteps(newStepsCount);
 
     }
-
+    const DecreaseSteps = () => {
+        const newStepsCount2 = steps - 1;
+        setSteps(newStepsCount2);
+    }
 
     useEffect(() => {
         console.log(steps);
@@ -22,6 +25,7 @@ const Watch = () => {
             <h2>This is my smart Watch</h2>
             <h3>My current step {steps}</h3>
             <button onClick={increaseSteps}>De dour.......</button>
+            <button onClick={DecreaseSteps}>Dour Thama.</button>
             <Displaying name="ajmeri" steps={steps}></Displaying>
             <Dial steps={steps}></Dial>
         </div>
